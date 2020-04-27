@@ -1,0 +1,21 @@
+{
+  "name": "Replace this word",
+  "version": "1.0.0",
+  "description": "Change a word you don't like to see anymore",
+  "manifest_version": 2,
+  "icons": {"128":"icon.png"},
+  "permissions": ["declarativeContent","storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["chromeRun.js","findText.js"]
+    }
+  ],
+  "background": { 
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
