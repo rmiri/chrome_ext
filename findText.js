@@ -6,6 +6,9 @@ var word = "Bolsonaro",
 
 const change = false;
 
+chrome.storage.sync.get('color', function(data) {
+   console.log('hello')
+  });
    
     while (curr = queue.pop()) {
         if (!curr.textContent.match(word)) continue;
